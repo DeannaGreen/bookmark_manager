@@ -10,13 +10,15 @@ I would like to see a list of bookmarks.
 
 Domain Model of the above User Story
 
-   Client         Controller       Model   View
+   Client         Controller                   Model         View
 
  -----------          ----------     all     ----------
 |           |   GET  |          |---------->|          |
 |           |------->|          |<----------| Bookmark |
 | /bookmarks|        |    app   |[bookmarks]|          |
 |           |        |          |            ----------
-|           |<-------|          |
-|           |response|          |
- -----------          ----------
+|           |<-------|          |--------------------> -------------
+|           |response|          |     [bookmarks]     |             |
+ -----------          ---------- <--------------------|erb bookmarks|
+                                          html        |             |
+                                                       -------------
